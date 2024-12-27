@@ -1,8 +1,5 @@
 import setuptools
 
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
-
 __version__ = "0.0.1"
 
 REPO_NAME = "Kidney-Disease-Classification"
@@ -16,7 +13,6 @@ setuptools.setup(
     author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
     description="A small package to classify kidney disease",
-    long_description=long_description,
     long_description_content_type="text/markdown",
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
     project_urls={
