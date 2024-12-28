@@ -2,7 +2,7 @@ from src.KidneyDiseaseClassifier.config.configuration import ConfigurationManage
 from src.KidneyDiseaseClassifier.components.data_ingestion import DataIngestion
 from src.KidneyDiseaseClassifier import logger
 
-STAGE_NAME = "Data Ingestion Stage"
+STAGE_NAME = "Data Ingestion stage"
 
 class DataIngestionTrainingPipeline:
     def __init__(self):
@@ -15,12 +15,12 @@ class DataIngestionTrainingPipeline:
         data_ingestion.download_file()
         data_ingestion.extract_zip_file()
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     try:
-        logger.info(f">>>>>>>> STAGE {STAGE_NAME} STARTED <<<<<<<<<")
+        logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
         obj = DataIngestionTrainingPipeline()
         obj.main()
-        logger.info(f">>>>>>>> STAGE {STAGE_NAME} COMPLETED <<<<<<<<<")
+        logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
     except Exception as e:
-        logger.error(f"Error in {STAGE_NAME} - {str(e)}")
+        logger.exception(e)
         raise e
