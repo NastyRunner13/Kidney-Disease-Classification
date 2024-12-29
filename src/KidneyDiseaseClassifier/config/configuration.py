@@ -1,7 +1,7 @@
 import os
 from src.KidneyDiseaseClassifier.constants import *
 from src.KidneyDiseaseClassifier.utils.common import read_yaml, create_directories
-from src.KidneyDiseaseClassifier.entity.config_entity import DataIngestionConfig, PrepareBaseModelConfig, TrainingConfig
+from src.KidneyDiseaseClassifier.entity.config_entity import DataIngestionConfig, PrepareBaseModelConfig, TrainingConfig, EvaluationConfig
 
 class ConfigurationManager:
     def __init__(
@@ -67,3 +67,13 @@ class ConfigurationManager:
         )
 
         return training_config
+    
+    def get_evaluation_config(self) -> EvaluationConfig:
+        eval_config = EvaluationConfig(
+            training_data="artifacts/data_ingestion/CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone",
+            mlflow_uri="https://dagshub.com/princegupta1586/Kidney-Disease-Classification.mlflow/",
+            all_params=self.params,
+            params_image_size=self.params.IMAGE_SIZE,
+            params_batch_size=self.params.BATCH_SIZE
+        )
+        return eval_config
