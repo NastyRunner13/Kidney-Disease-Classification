@@ -38,12 +38,12 @@ def create_directories(path_to_directories: list, verbose=True):
 
 
 @ensure_annotations
-def save_json(path: Path, date: dict):
+def save_json(path: Path, data: dict):
     """
     Save the dictionary as a json file.
     """
     with open(path, "w") as file:
-        json.dump(date, file, indent=4)
+        json.dump(data, file, indent=4)
     logger.info(f"json file: {path} saved successfully.")
 
 
