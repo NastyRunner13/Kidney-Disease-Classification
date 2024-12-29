@@ -6,6 +6,7 @@ __pycache__/
 *.zip
 logs
 artifacts
+scores.json
 
 # C extensions
 *.so
