@@ -3,8 +3,8 @@ import tensorflow as tf
 from pathlib import Path
 import mlflow.keras
 from urllib.parse import urlparse
-from src.KidneyDiseaseClassifier.utils.common import save_json
-from src.KidneyDiseaseClassifier.entity.config_entity import EvaluationConfig
+from KidneyDiseaseClassifier.utils.common import save_json
+from KidneyDiseaseClassifier.entity.config_entity import EvaluationConfig
 
 class Evaluation:
     def __init__(self, config: EvaluationConfig):

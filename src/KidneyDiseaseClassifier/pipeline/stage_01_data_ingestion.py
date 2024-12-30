@@ -1,6 +1,6 @@
-from src.KidneyDiseaseClassifier.config.configuration import ConfigurationManager
-from src.KidneyDiseaseClassifier.components.data_ingestion import DataIngestion
-from src.KidneyDiseaseClassifier import logger
+from KidneyDiseaseClassifier.config.configuration import ConfigurationManager
+from KidneyDiseaseClassifier.components.data_ingestion import DataIngestion
+from KidneyDiseaseClassifier import logger
 
 STAGE_NAME = "Data Ingestion stage"
 

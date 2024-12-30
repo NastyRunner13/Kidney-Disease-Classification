@@ -1,6 +1,6 @@
-from src.KidneyDiseaseClassifier.config.configuration import ConfigurationManager
-from src.KidneyDiseaseClassifier.components.model_evaluation import Evaluation
-from src.KidneyDiseaseClassifier import logger
+from KidneyDiseaseClassifier.config.configuration import ConfigurationManager
+from KidneyDiseaseClassifier.components.model_evaluation import Evaluation
+from KidneyDiseaseClassifier import logger
 
 STAGE_NAME = "Evaluation stage"
 
@@ -14,7 +14,7 @@ class EvaluationPipeline:
         evaluation = Evaluation(eval_config)
         evaluation.evaluation()
         evaluation.save_score()
-        evaluation.log_into_mlflow()
+        # evaluation.log_into_mlflow()
 
 if __name__ == '__main__':
     try:

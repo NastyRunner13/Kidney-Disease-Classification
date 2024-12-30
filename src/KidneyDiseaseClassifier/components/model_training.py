@@ -1,5 +1,5 @@
 import tensorflow as tf
-from src.KidneyDiseaseClassifier.entity.config_entity import TrainingConfig
+from KidneyDiseaseClassifier.entity.config_entity import TrainingConfig
 from pathlib import Path
 
 class Training:

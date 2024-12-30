@@ -1,6 +1,6 @@
-from src.KidneyDiseaseClassifier.components.model_training import Training
-from src.KidneyDiseaseClassifier.config.configuration import ConfigurationManager
-from src.KidneyDiseaseClassifier import logger
+from KidneyDiseaseClassifier.components.model_training import Training
+from KidneyDiseaseClassifier.config.configuration import ConfigurationManager
+from KidneyDiseaseClassifier import logger
 
 STAGE_NAME = "Model Training"
 
